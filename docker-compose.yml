@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    entrypoint: ["/bin/bash", "/app/entrypoint.sh"]
+    volumes:
+      - ./backend:/app
+    environment:
+      - DJANGO_SUPERUSER_EMAIL=adminuser@default.com
+      - DJANGO_SUPERUSER_PASSWORD=adminpass
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    command: npm start
+    environment:
+      - REACT_APP_API_BASE_URL=http://localhost:8000/
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

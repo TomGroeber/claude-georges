@@ -1,0 +1,2 @@
+0 0 1 * * /usr/local/bin/python /app/manage.py add_leave_task >> /var/log/cron.log 2>&1
+0 0 1 1 * /usr/local/bin/python /app/manage.py add_events >> /var/log/cron.log 2>&1

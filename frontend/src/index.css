@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "rsuite/dist/rsuite.css";
+
+:root {
+  --rs-color-focus-ring: rgba(58, 71, 171, 0.25);
+  --rs-input-focus-border:#3A47AB;
+}
+
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.rs-input-group{
+  border-radius: 20px !important;
+  padding-left: 10px;
+  border-color: rgb(209 213 219);
+}
+
+.rs-calendar-time-dropdown-cell.rs-calendar-time-dropdown-cell-active{
+    background-color: #3A47AB !important;
+}
+
+.rs-btn.rs-btn-primary{
+  background-color: #3A47AB !important;
+
+}
+
+/* Change border and shadow color to #3A47AB */
+.rs-time-range-picker .rs-picker-toggle, 
+.rs-time-range-picker .rs-picker-input input, 
+.rs-time-range-picker .rs-picker-dropdown, 
+.rs-time-range-picker .rs-picker-toggle-wrapper {
+  border: 1px solid #3A47AB !important;
+  box-shadow: 0 0 0 2px rgba(58, 71, 171, 0.4) !important;
+  outline: none !important;
+}
+
+/* Change color when input is focused */
+.rs-time-range-picker .rs-picker-input input:focus {
+  border: 1px solid #3A47AB !important;
+  box-shadow: 0 0 0 2px rgba(58, 71, 171, 0.4) !important;
+}
+
+
+.rs-btn.rs-btn-link.rs-btn-sm{
+  display: none;
+}
+
+.rdrDefinedRangesWrapper{
+  display: none !important;
+}
+
+.rbc-toolbar button {
+  background-color: #515db8 !important;
+  color: white !important;
+  border-radius: 5px !important;
+  padding: 5px 10px !important;
+  margin: 0 5px !important;
+}
+
+.bc-toolbar-label{
+  color: #3A47AB !important;
+}
+
+.rbc-month-view{
+  border-radius: 10px !important;
+  overflow:hidden  !important;
+}
+
+.rbc-time-view{
+  border-radius: 10px !important;
+  overflow:hidden  !important;
+}
+
+.rbc-agenda-view{
+  border-radius: 6px !important;
+  overflow:hidden  !important;
+}
+
+.rbc-row.rbc-month-header{
+  background-color: #3A47AB !important;
+  color: white !important;
+}
+
+.rbc-row.rbc-time-header-cell{
+  background-color: #3A47AB !important;
+  color: white !important;
+}
+
+.rbc-header.rbc-today{
+  background-color: #a0aaf1 !important;
+  color: white !important;
+}
+
+.rbc-today{
+  background-color: #a0aaf1 !important;
+  color: white !important;
+}
